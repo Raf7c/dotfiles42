@@ -20,6 +20,3 @@ setopt hist_find_no_dups
 
 # 4. Aliases
 [ -f "$HOME/.config/shell/aliases" ] && . "$HOME/.config/shell/aliases"
-
-# 5. Starship prompt
-command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"

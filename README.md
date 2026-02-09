@@ -19,7 +19,14 @@ dotfile_for42/
 
 ## Déployer (liens symboliques)
 
-Depuis la racine du dépôt (ou là où se trouve ce dossier) :
+**Option 1 — script** (depuis la racine du dépôt) :
+
+```bash
+./scripts/deploy.sh
+# ou : bash scripts/deploy.sh
+```
+
+**Option 2 — à la main** :
 
 ```bash
 DOTS="$HOME/.dotfiles/dotfile_for42"   # ou le chemin où est ce dossier
@@ -40,11 +47,9 @@ Le `.zshrc` charge `~/.config/shell/env`, `~/.config/zsh/zinit.zsh` et `~/.confi
 |-------|-------------|------|
 | **zsh** | Oui | Souvent déjà le shell par défaut. |
 | **tmux** | Non | Si absent, la config tmux est ignorée. |
-| **Kitty** | Non | Config utilisée seulement si Kitty est lancé (souvent pas dispo sur les postes 42). |
-| **Starship** | Non | Prompt fancy uniquement si binaire dans `PATH` (ex. `~/.local/bin`). Install possible en user : [starship.rs](https://starship.rs). |
+| **Kitty** | Non | Config utilisée seulement si Kitty est lancé. |
 | **nvim/vim** | Non | `EDITOR` s’adapte à ce qui est disponible. |
 
-Optionnel : exécuter une fois `scripts/shell.sh` pour migrer l’historique bash/zsh vers XDG et créer les dossiers cache/state (sinon le `.zshrc` crée le minimum pour l’historique).
 
 ## Tmux
 
